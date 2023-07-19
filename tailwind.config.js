@@ -7,6 +7,10 @@ export default {
       sans: "Montserrat, sans-serif",
     },
     extend: {
+      spacing: {
+        128: "32rem",
+        160: "48rem",
+      },
       colors: {
         grass: {
           100: "#E7F69B",

@@ -166,7 +166,7 @@ function App() {
           <img src={Noise} alt="" />
         </div>
       </div>
-      <div className="mt-20">
+      <div className="mt-40">
         <div className="streamer-container1 flex flex-nowrap text-white">
           {streamerArray1.map((txt) => {
             return (
@@ -188,10 +188,13 @@ function App() {
           })}
         </div>
       </div>
-      <section className="mt-80 mb-40">
+      <section className="mt-40 mb-40">
         <div className="flex flex-col w-full items-center gap-10 h-full">
           <h1>Projects</h1>
-          <div className="cards w-full flex" onScroll={handleCardScroll}>
+          <div
+            className="cards w-full overflow-x-scroll flex gap-20"
+            onScroll={handleCardScroll}
+          >
             <Card />
             <Card />
             <Card />

@@ -35,7 +35,3 @@ h2 {
 .noise {
   transition: all ease-out;
 }
-
-.card-bg-green {
-  @apply absolute w-full h-full bg-gradient-to-br from-grass-500 -z-20 rounded-md;
-}
