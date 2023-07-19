@@ -7,27 +7,35 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  @apply bg-ash-900;
+  @apply bg-ash-900 overflow-x-hidden;
 }
 h1 {
-  @apply font-display font-bold text-8xl text-white;
+  @apply font-display font-bold text-8xl xl:text-9xl text-white;
 }
 
 h2 {
   @apply font-sans text-white;
 }
 .svg-grid {
-  @apply absolute right-0 object-contain w-1/4;
+  @apply absolute right-0 object-contain;
 }
 .svg-row {
   @apply flex object-contain;
 }
 
 .circle {
-  max-width: 126px;
-  max-height: 126px;
+  @apply sm:h-40 sm:w-40 xl:h-60 xl:w-60;
 }
 .svg-object {
   transform-origin: 50% 50%;
   transform: rotate(180deg);
+  transition: all ease-out;
+}
+
+.noise {
+  transition: all ease-out;
+}
+
+.card-bg-green {
+  @apply absolute w-full h-full bg-gradient-to-br from-grass-500 -z-20 rounded-md;
 }

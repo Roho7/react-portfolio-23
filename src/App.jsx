@@ -2,25 +2,63 @@ import { useState } from "react";
 import Logo from "./assets/logo.png";
 import Noise from "./assets/noise-blog.png";
 import "./App.css";
+import { FaStarOfLife } from "react-icons/fa";
+import Topbar from "./components/Topbar";
+import Card from "./components/Card";
 
 const svg = document.querySelectorAll(".svg-object");
+const noise = document.querySelector(".noise");
+const streamer1 = document.querySelector(".streamer-container1");
+const streamer2 = document.querySelector(".streamer-container2");
 
 const handleScrollSvg = () => {
   const scrollPos = window.scrollY;
-  const rotateAmt = scrollPos / 2;
+  const moveAmt = scrollPos / 3;
+
   svg.forEach((item) => {
-    item.style.transform = `rotate(${rotateAmt}deg)`;
+    item.style.transform = `rotate(${moveAmt}deg)`;
   });
+  noise.style.transform = `translateX(${moveAmt}px) translateY(${-moveAmt}px)`;
+  streamer1.style.transform = `translateX(${-moveAmt}px)`;
+  streamer2.style.transform = `translateX(${moveAmt}px)`;
 };
 
-window.addEventListener("scroll", handleScrollSvg);
+const handleCardScroll = () => {
+  const card = document.querySelector(".cards");
+  const amtScrolled = card.scrollTop;
 
-var initVal = 100;
-for (var i = 0; i < 10; i++) {}
+  card.style.transform = `rotateX(${amtScrolled / 5}deg)`;
+};
+
+const streamerArray1 = [
+  "javascript",
+  "typescript",
+  "reactjs",
+  "tailwind",
+  "html",
+  "css",
+  "after effects",
+  "illustrator",
+  "obsidian",
+];
+const streamerArray2 = [
+  "motion graphics",
+  "ui/ux",
+  "frontend",
+  "hci",
+  "digital arts",
+  "web design",
+  "creative coding",
+  "product development",
+];
 
 function App() {
+  window.addEventListener("scroll", handleScrollSvg);
+  window.addEventListener("scroll", handleCardScroll);
+
   return (
     <>
+      <Topbar />
       <div className="flex relative mt-10">
         <div className="mx-20">
           <div className="h-10 w-10 mb-3 object-contain">
@@ -123,10 +161,44 @@ function App() {
             </svg>
           </div>
         </div>
-        <div className="absolute top-1/4">
+
+        <div className="noise absolute top-1/4 opacity-60">
           <img src={Noise} alt="" />
         </div>
       </div>
+      <div className="mt-20">
+        <div className="streamer-container1 flex flex-nowrap text-white">
+          {streamerArray1.map((txt) => {
+            return (
+              <div className="streamer-text flex items-center whitespace-nowrap text-3xl">
+                <span>{txt}</span>
+                <FaStarOfLife className="mx-4 text-grass-500" />
+              </div>
+            );
+          })}
+        </div>
+        <div className="streamer-container2 flex flex-nowrap float-right text-white">
+          {streamerArray2.map((txt) => {
+            return (
+              <div className="streamer-text flex items-center whitespace-nowrap text-3xl">
+                <span>{txt}</span>
+                <FaStarOfLife className="mx-4 text-grass-500" />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <section className="mt-80 mb-40">
+        <div className="flex flex-col w-full items-center gap-10 h-full">
+          <h1>Projects</h1>
+          <div className="cards w-full flex" onScroll={handleCardScroll}>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
+        </div>
+      </section>
     </>
   );
 }
