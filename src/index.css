@@ -29,9 +29,52 @@ h2 {
 .svg-object {
   transform-origin: 50% 50%;
   transform: rotate(180deg);
-  transition: all ease-out;
+}
+
+.clock-wise {
+  animation: rotate-circle-clock 60s linear infinite;
+}
+.anti-clock-wise {
+  animation: rotate-circle-anti-clock 30s linear infinite;
+}
+
+@keyframes rotate-circle-clock {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+@keyframes rotate-circle-anti-clock {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
 
 .noise {
   transition: all ease-out;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.about-cards {
+  @apply h-full w-full bg-ash-500 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 border border-gray-100;
+}
+.sine-container {
+  animation: moving 15s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
