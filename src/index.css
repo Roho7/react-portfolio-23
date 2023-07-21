@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 :root {
   @apply bg-ash-900 overflow-x-hidden;
@@ -77,4 +78,8 @@ h2 {
   100% {
     transform: translateX(-100%);
   }
+}
+
+.arrow {
+  transition: all 1s ease;
 }

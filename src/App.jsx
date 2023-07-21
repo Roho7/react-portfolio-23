@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Logo from "./assets/logo.png";
 import Noise from "./assets/noise-blog.png";
 import "./App.css";
@@ -48,7 +47,8 @@ const streamerArray2 = [
   "product development",
 ];
 
-function App() {
+function App(props) {
+  const projectData = props.data;
   window.addEventListener("scroll", handleScrollSvg);
 
   return (
@@ -161,7 +161,7 @@ function App() {
           <img src={Noise} alt="" />
         </div>
       </div>
-      <div className="mt-40">
+      <div className="mt-80">
         <div className="streamer-container1 flex flex-nowrap text-white">
           {streamerArray1.map((txt) => {
             return (
@@ -183,7 +183,7 @@ function App() {
           })}
         </div>
       </div>
-      <Project />
+      <Project data={projectData} />
       <About />
       <Footer />
     </>
