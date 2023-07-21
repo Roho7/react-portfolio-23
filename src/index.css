@@ -6,9 +6,14 @@
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 :root {
   @apply bg-ash-900 overflow-x-hidden;
+}
+body {
+  overflow-x: hidden;
 }
 h1 {
   @apply font-display font-bold text-7xl lg:text-8xl xl:text-9xl text-white;
@@ -89,9 +94,9 @@ h2 {
 }
 
 .streamer-container1 {
-  @apply flex float-left text-white;
+  @apply flex float-left text-white overflow-x-hidden;
 }
 
 .streamer-container2 {
-  @apply flex flex-nowrap float-right text-white;
+  @apply flex float-right text-white overflow-x-hidden;
 }

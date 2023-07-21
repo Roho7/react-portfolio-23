@@ -12,16 +12,23 @@ const handleScrollSvg = () => {
   const noise = document.querySelector(".noise");
   const streamer1 = document.querySelector(".streamer-container1");
   const streamer2 = document.querySelector(".streamer-container2");
+  var widthScreen = document.documentElement.clientWidth || window.innerWidth;
+
+  console.log(widthScreen);
 
   const scrollPos = window.scrollY;
   const moveAmt = scrollPos / 4;
-
   svg.forEach((item) => {
     item.style.transform = `rotate(${moveAmt}deg)`;
   });
   noise.style.transform = `translateX(${moveAmt}px) translateY(${-moveAmt}px)`;
-  streamer1.style.transform = `translateX(${-moveAmt}px)`;
-  streamer2.style.transform = `translateX(${moveAmt}px)`;
+  if (widthScreen > 767) {
+    streamer1.style.transform = `translateX(${-moveAmt}px)`;
+    streamer2.style.transform = `translateX(${moveAmt}px)`;
+  } else {
+    streamer1.style.transform = `translateX(${-moveAmt * 7}px)`;
+    streamer2.style.transform = `translateX(${moveAmt * 7}px)`;
+  }
 };
 
 const streamerArray1 = [

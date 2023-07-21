@@ -16,7 +16,7 @@ function Project(props) {
           </div>
         </div>
         <div
-          className="cards w-full overflow-x-scroll flex gap-10 md:gap-20 px-20"
+          className="cards w-full overflow-x-scroll flex gap-10 md:gap-20 px-10 md:px-20"
           ref={scrollRef}
         >
           {projectData.map((item) => {

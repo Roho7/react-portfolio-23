@@ -3,7 +3,7 @@ import Line from "../assets/Line.png";
 
 function About() {
   return (
-    <div className="relative w-screen overflow-x-hidden">
+    <div className="relative overflow-x-hidden">
       <div className="mx-8 lg:mx-32 flex flex-col gap-16 items-center">
         <div className="relative">
           <h1>About</h1>
