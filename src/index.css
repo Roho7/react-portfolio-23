@@ -11,14 +11,14 @@ html {
   @apply bg-ash-900 overflow-x-hidden;
 }
 h1 {
-  @apply font-display font-bold text-8xl xl:text-9xl text-white;
+  @apply font-display font-bold text-7xl lg:text-8xl xl:text-9xl text-white;
 }
 
 h2 {
   @apply font-sans text-white;
 }
 .svg-grid {
-  @apply absolute right-0 object-contain;
+  @apply absolute  md:right-0 -z-10 opacity-10 md:opacity-100 overflow-x-hidden;
 }
 .svg-row {
   @apply flex object-contain;
@@ -36,7 +36,7 @@ h2 {
   animation: rotate-circle-clock 60s linear infinite;
 }
 .anti-clock-wise {
-  animation: rotate-circle-anti-clock 30s linear infinite;
+  animation: rotate-circle-anti-clock 60s linear infinite;
 }
 
 @keyframes rotate-circle-clock {
@@ -80,6 +80,18 @@ h2 {
   }
 }
 
-.arrow {
-  transition: all 1s ease;
+.about-text {
+  @apply text-4xl xl:text-6xl font-medium;
+}
+
+.streamer-text {
+  @apply flex items-center whitespace-nowrap md:text-3xl;
+}
+
+.streamer-container1 {
+  @apply flex float-left text-white;
+}
+
+.streamer-container2 {
+  @apply flex flex-nowrap float-right text-white;
 }

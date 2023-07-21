@@ -22,7 +22,7 @@ function ProjectPage(props) {
                 <h1 className="">{project.Name}</h1>
                 <h1 className="text-4xl mb-4 text-ash-100">{project.Type}</h1>
                 <h2 className="font-bold text-xl">Context</h2>
-                <h2 className="mb-4 w-1/2">{project.Description}</h2>
+                <h2 className="mb-4 md:w-1/2">{project.Description}</h2>
                 <div className="flex gap-4">
                   <span className=" text-white text-sm p-2 border border-white rounded-full">
                     {project.Software1}

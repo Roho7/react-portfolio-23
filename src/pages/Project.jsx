@@ -7,7 +7,7 @@ function Project(props) {
   const scrollRef = useHorizontalScroll();
 
   return (
-    <section className="mt-40 mb-40">
+    <section className="mt-20 mb-20 md:mt-40 md:mb-40">
       <div className="flex flex-col w-full items-center gap-10 h-full">
         <div className="flex justify-center items-baseline gap-20">
           <div className="relative">
@@ -16,7 +16,7 @@ function Project(props) {
           </div>
         </div>
         <div
-          className="cards w-full overflow-x-scroll flex gap-20 px-20"
+          className="cards w-full overflow-x-scroll flex gap-10 md:gap-20 px-20"
           ref={scrollRef}
         >
           {projectData.map((item) => {

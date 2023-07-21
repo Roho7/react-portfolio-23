@@ -50,12 +50,13 @@ const streamerArray2 = [
 function App(props) {
   const projectData = props.data;
   window.addEventListener("scroll", handleScrollSvg);
+  window.addEventListener("touchmove", handleScrollSvg);
 
   return (
     <>
       <Topbar />
       <div className="flex relative mt-10">
-        <div className="mx-20">
+        <div className="mx-4 lg:mx-20">
           <div className="h-10 w-10 mb-3 object-contain">
             <img src={Logo} alt="" />
           </div>
@@ -161,24 +162,21 @@ function App(props) {
           <img src={Noise} alt="" />
         </div>
       </div>
-      <div className="mt-80">
-        <div className="streamer-container1 flex flex-nowrap text-white">
+      <div className="mt-20 md:mt-80 overflow-x-hidden">
+        <div className="streamer-container1">
           {streamerArray1.map((txt) => {
             return (
-              <div className="streamer-text flex items-center whitespace-nowrap text-3xl">
+              <div className="streamer-text ">
                 <span>{txt}</span>
                 <FaStarOfLife className="mx-4 text-grass-500" />
               </div>
             );
           })}
         </div>
-        <div className="streamer-container2 flex flex-nowrap float-right text-white">
+        <div className="streamer-container2 ">
           {streamerArray2.map((txt, index) => {
             return (
-              <div
-                key={index}
-                className="streamer-text flex items-center whitespace-nowrap text-3xl"
-              >
+              <div key={index} className="streamer-text ">
                 <span>{txt}</span>
                 <FaStarOfLife className="mx-4 text-grass-500" />
               </div>
