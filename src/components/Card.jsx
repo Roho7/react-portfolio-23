@@ -10,7 +10,10 @@ function Card(props) {
   };
 
   return (
-    <div className="group" onClick={() => handleCardClick(props.id)}>
+    <div
+      className="group cursor-pointer"
+      onClick={() => handleCardClick(props.id)}
+    >
       <div className="relative h-96 w-160 card-upper rounded-3xl overflow-hidden ">
         <div className="absolute w-full h-full z-10 bg-gradient-to-tr from-ash-900 rounded-3xl"></div>
         <img

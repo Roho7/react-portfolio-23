@@ -173,9 +173,12 @@ function App(props) {
           })}
         </div>
         <div className="streamer-container2 flex flex-nowrap float-right text-white">
-          {streamerArray2.map((txt) => {
+          {streamerArray2.map((txt, index) => {
             return (
-              <div className="streamer-text flex items-center whitespace-nowrap text-3xl">
+              <div
+                key={index}
+                className="streamer-text flex items-center whitespace-nowrap text-3xl"
+              >
                 <span>{txt}</span>
                 <FaStarOfLife className="mx-4 text-grass-500" />
               </div>
