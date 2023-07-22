@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 function ProjectPage(props) {
   const project = props.data;
@@ -36,11 +36,26 @@ function ProjectPage(props) {
                   >
                     {project.Software2}
                   </span>
+                  <Link
+                    to={project.Link}
+                    className={
+                      project.Link
+                        ? "text-ash-500 hover:text-grass-500"
+                        : "hidden"
+                    }
+                  >
+                    <span>View Project</span>
+                  </Link>
                 </div>
               </div>
               <div className="">
                 <img src={project.Image} className="object-cover" />
               </div>
+              <iframe
+                src={project.Video}
+                frameborder="0"
+                className={project.Video ? "w-full h-full" : "hidden"}
+              ></iframe>
             </div>
           );
         })}
