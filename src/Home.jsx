@@ -27,7 +27,7 @@ function Home() {
 
   return (
     <Routes>
-      <Route path="/react-portfolio-23/" element={<App data={projectList} />} />
+      <Route path="/" element={<App data={projectList} />} />
       <Route path="/project/:id" element={<ProjectPage data={projectList} />} />
     </Routes>
   );
