@@ -21,7 +21,7 @@ function Card(props) {
           alt=""
           className="absolute h-full w-full object-cover rounded-3xl group-hover:scale-105 transition-all duration-500 ease"
         />
-        <div className="m-4 md:m-10 absolute bottom-0 z-20 group-hover:mx-16 transition-all ease-[cubic-bezier(.57,.21,.69,1.25)]">
+        <div className="m-4 md:m-10 absolute bottom-0 z-20  group-hover:mx-6 md:group-hover:mx-16 transition-all ease-[cubic-bezier(.57,.21,.69,1.25)]">
           <h1 className="font-normal text-3xl md:text-4xl lg:text-8xl">
             {props.name}
           </h1>

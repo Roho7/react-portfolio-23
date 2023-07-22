@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import { FaAngleLeft } from "react-icons/fa";
 
 function ProjectPage(props) {
   const project = props.data;
@@ -10,15 +11,23 @@ function ProjectPage(props) {
   console.log(id);
   console.log(project.filter((project) => project.id === id));
 
+  const navigate = useNavigate();
+  const handleBackButton = () => {
+    navigate("/react-portfolio-23/");
+  };
+
   return (
     <div>
+      <button className="m-8 mb-0" onClick={handleBackButton}>
+        <FaAngleLeft /> Back
+      </button>
       {project
         .sort((a, b) => a.Index - b.Index)
         .filter((project) => project.id === id)
         .map((project) => {
           return (
             <div key={project.id} className="relative flex flex-col">
-              <div className="m-8">
+              <div className="m-8 mt-2">
                 <h1 className="">{project.Name}</h1>
                 <h1 className="text-4xl mb-4 text-ash-100">{project.Type}</h1>
                 <h2 className="font-bold text-xl">Context</h2>
@@ -36,17 +45,17 @@ function ProjectPage(props) {
                   >
                     {project.Software2}
                   </span>
-                  <Link
-                    to={project.Link}
-                    className={
-                      project.Link
-                        ? "text-ash-500 hover:text-grass-500"
-                        : "hidden"
-                    }
-                  >
-                    <span>View Project</span>
-                  </Link>
                 </div>
+                <Link
+                  to={project.Link}
+                  className={
+                    project.Link
+                      ? "text-ash-500 hover:text-grass-500"
+                      : "hidden"
+                  }
+                >
+                  <p className="mt-4">View Project</p>
+                </Link>
               </div>
               <div className="">
                 <img src={project.Image} className="object-cover" />
