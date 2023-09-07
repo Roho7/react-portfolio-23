@@ -13,7 +13,7 @@ function ProjectPage(props) {
 
   const navigate = useNavigate();
   const handleBackButton = () => {
-    navigate("/react-portfolio-23/");
+    navigate("/");
   };
 
   return (
@@ -60,11 +60,16 @@ function ProjectPage(props) {
               <div className="">
                 <img src={project.Image} className="object-cover" />
               </div>
-              <iframe
-                src={project.Video}
-                frameborder="0"
-                className={project.Video ? "w-full h-full" : "hidden"}
-              ></iframe>
+              {project.Video && (
+                <div className="h-72 md:h-screen">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${project.Video}`}
+                    className={project.Video ? "w-full h-full" : "hidden"}
+                  ></iframe>
+                </div>
+              )}
             </div>
           );
         })}

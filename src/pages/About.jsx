@@ -37,6 +37,12 @@ function About() {
             <h1 className="text-2xl font-normal">Education</h1>
             <h1 className="about-text">M.Sc. Human-Computer Interaction</h1>
             <h2>Univeristy of Nottingham</h2>
+            <span className="text-ash-100">2023 - 2024</span>
+
+            <h1 className="about-text">
+              CS50x: Introduction to Computer Science
+            </h1>
+            <h2>CS50, Harvard University</h2>
             <span className="text-ash-100">2023</span>
             <h1 className="about-text">B.Sc. Neuroscience</h1>
             <h2>Amity University Noida</h2>

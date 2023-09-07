@@ -22,7 +22,12 @@ h1 {
 h2 {
   @apply font-sans text-white;
 }
-
+h3 {
+  @apply text-gray-400;
+}
+span {
+  @apply mb-3;
+}
 button {
   @apply py-1 px-2 text-white flex gap-2 items-center border border-white rounded-full hover:bg-white hover:text-ash-900 hover:gap-4 transition-all ease-out;
 }

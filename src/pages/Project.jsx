@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useHorizontalScroll } from "../hooks/useHorizontalScroll";
 import Card from "../components/Card";
 
