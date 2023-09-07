@@ -6,6 +6,7 @@ import Topbar from "./components/Topbar";
 import Project from "./pages/Project";
 import About from "./pages/About";
 import Footer from "./pages/Footer";
+import Skills from "./pages/Skills";
 
 const handleScrollSvg = () => {
   const svg = document.querySelectorAll(".svg-object");
@@ -18,9 +19,7 @@ const handleScrollSvg = () => {
 
   const scrollPos = window.scrollY;
   const moveAmt = scrollPos / 4;
-  svg.forEach((item) => {
-    item.style.transform = `rotate(${moveAmt}deg)`;
-  });
+
   noise.style.transform = `translateX(${moveAmt}px) translateY(${-moveAmt}px)`;
   if (widthScreen > 767) {
     streamer1.style.transform = `translateX(${-moveAmt}px)`;
@@ -193,6 +192,7 @@ function App(props) {
       </div>
       <Project data={projectData} />
       <About />
+      <Skills />
       <Footer />
     </>
   );
