@@ -127,7 +127,9 @@ function Skills() {
                   className=" text-ash-100 flex items-center gap-2 whitespace-nowrap"
                   key={index}
                 >
-                  <div className="text-grass-500">{skill.icon}</div>
+                  <div className="text-grass-500 -translate-y-2">
+                    {skill.icon}
+                  </div>
                   <span> {skill.name} </span>
                 </div>
               );
@@ -142,7 +144,9 @@ function Skills() {
                   className=" text-ash-100 flex items-center gap-2 whitespace-nowrap"
                   key={index}
                 >
-                  <div className="text-grass-500">{skill.icon}</div>
+                  <div className="text-grass-500 -translate-y-2">
+                    {skill.icon}
+                  </div>
                   <span> {skill.name} </span>
                 </div>
               );
@@ -157,7 +161,9 @@ function Skills() {
                   className="text-ash-100 flex items-center gap-2 whitespace-nowrap"
                   key={index}
                 >
-                  <div className="text-grass-500">{skill.icon}</div>
+                  <div className="text-grass-500 -translate-y-2">
+                    {skill.icon}
+                  </div>
                   <span> {skill.name} </span>
                 </div>
               );
@@ -171,7 +177,9 @@ function Skills() {
                     className="text-ash-100 flex items-center gap-2 whitespace-nowrap"
                     key={index}
                   >
-                    <div className="text-grass-500">{skill.icon}</div>
+                    <div className="text-grass-500 -translate-y-2">
+                      {skill.icon}
+                    </div>
                     <span> {skill.name} </span>
                   </div>
                 );
@@ -188,7 +196,9 @@ function Skills() {
                   className="text-ash-100 flex items-center gap-2 whitespace-nowrap"
                   key={index}
                 >
-                  <div className="text-grass-500">{skill.icon}</div>
+                  <div className="text-grass-500 -translate-y-2">
+                    {skill.icon}
+                  </div>
                   <span> {skill.name} </span>
                 </div>
               );

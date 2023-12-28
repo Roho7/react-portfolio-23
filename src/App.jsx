@@ -30,26 +30,27 @@ const handleScrollSvg = () => {
 };
 
 const streamerArray1 = [
+  "html",
   "javascript",
+  "css",
   "typescript",
   "reactjs",
+  "nextjs",
   "tailwind",
-  "html",
-  "css",
-  "after effects",
-  "illustrator",
-  "obsidian",
+  "nodejs",
   "firebase",
+  "illustrator",
+  "after effects",
 ];
 const streamerArray2 = [
   "motion graphics",
   "ui/ux",
+  "full-stack",
   "frontend",
   "hci",
-  "digital arts",
   "web design",
-  "creative coding",
-  "product development",
+  "software development",
+  "product design",
 ];
 
 function App(props) {

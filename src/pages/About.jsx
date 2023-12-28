@@ -13,7 +13,7 @@ function About() {
         <div className="grid lg:grid-cols-5 gap-4">
           <div className="about-cards p-8">
             <h1 className="text-2xl font-normal">Age</h1>
-            <h1 className="about-text">21</h1>
+            <h1 className="about-text">22</h1>
           </div>
           <div className="about-cards p-8">
             <h1 className="text-2xl font-normal">Nationality</h1>
@@ -25,6 +25,10 @@ function About() {
           </div>
           <div className="about-cards p-8 lg:col-span-2 lg:row-span-2">
             <h1 className="text-2xl font-normal">Experience</h1>
+            <h1 className="about-text mb-2">SimpliML</h1>
+            <h2>Full-Stack Developer</h2>
+            <span className="text-ash-100">2023</span>
+
             <h1 className="about-text mb-2">Frenzopay</h1>
             <h2>UI/UX Designer</h2>
             <span className="text-ash-100">2022 - 2023</span>
