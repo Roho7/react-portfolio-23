@@ -12,8 +12,7 @@ function Card(props) {
   return (
     <div
       className="group cursor-pointer"
-      onClick={() => handleCardClick(props.id)}
-    >
+      onClick={() => handleCardClick(props.id)}>
       <div className="relative h-40 md:h-96 w-80 md:w-160 card-upper rounded-3xl overflow-hidden ">
         <div className="absolute w-full h-full z-10 bg-gradient-to-tr from-ash-900 rounded-3xl"></div>
         <img
@@ -22,7 +21,7 @@ function Card(props) {
           className="absolute h-full w-full object-cover rounded-3xl group-hover:scale-105 transition-all duration-500 ease"
         />
         <div className="m-4 md:m-10 absolute bottom-0 z-20  group-hover:mx-6 md:group-hover:mx-16 transition-all ease-[cubic-bezier(.57,.21,.69,1.25)]">
-          <h1 className="font-normal text-3xl md:text-4xl lg:text-8xl">
+          <h1 className="font-normal text-3xl md:text-4xl lg:text-8xl whitespace-nowrap">
             {props.name}
           </h1>
           <h2 className="md:mb-2 font-display md:text-3xl">{props.type}</h2>

@@ -8,7 +8,9 @@ import {
   SiAdobexd,
   SiC,
   SiJinja,
+  SiNextdotjs,
 } from "react-icons/si";
+import { RiSupabaseFill } from "react-icons/ri";
 
 import {
   BiLogoFirebase,
@@ -25,6 +27,11 @@ import {
 const skillArray = [
   {
     type: "development",
+    name: "NEXT.js",
+    icon: <SiNextdotjs />,
+  },
+  {
+    type: "development",
     name: "React",
     icon: <BiLogoReact />,
   },
@@ -37,6 +44,11 @@ const skillArray = [
     type: "development",
     name: "NodeJS",
     icon: <BiLogoNodejs />,
+  },
+  {
+    type: "development",
+    name: "Supabase",
+    icon: <RiSupabaseFill />,
   },
   {
     type: "development",
@@ -125,8 +137,7 @@ function Skills() {
               return (
                 <div
                   className=" text-ash-100 flex items-center gap-2 whitespace-nowrap"
-                  key={index}
-                >
+                  key={index}>
                   <div className="text-grass-500 -translate-y-2">
                     {skill.icon}
                   </div>
@@ -142,8 +153,7 @@ function Skills() {
               return (
                 <div
                   className=" text-ash-100 flex items-center gap-2 whitespace-nowrap"
-                  key={index}
-                >
+                  key={index}>
                   <div className="text-grass-500 -translate-y-2">
                     {skill.icon}
                   </div>
@@ -159,8 +169,7 @@ function Skills() {
               return (
                 <div
                   className="text-ash-100 flex items-center gap-2 whitespace-nowrap"
-                  key={index}
-                >
+                  key={index}>
                   <div className="text-grass-500 -translate-y-2">
                     {skill.icon}
                   </div>
@@ -175,8 +184,7 @@ function Skills() {
                 return (
                   <div
                     className="text-ash-100 flex items-center gap-2 whitespace-nowrap"
-                    key={index}
-                  >
+                    key={index}>
                     <div className="text-grass-500 -translate-y-2">
                       {skill.icon}
                     </div>
@@ -194,8 +202,7 @@ function Skills() {
               return (
                 <div
                   className="text-ash-100 flex items-center gap-2 whitespace-nowrap"
-                  key={index}
-                >
+                  key={index}>
                   <div className="text-grass-500 -translate-y-2">
                     {skill.icon}
                   </div>
