@@ -1,5 +1,45 @@
 import React from "react";
 import Line from "../assets/Line.png";
+import { Link } from "react-router-dom";
+
+const experience = [
+  {
+    company: "Periskope",
+    role: "Full-Stack Developer",
+    year: "2024",
+    link: "https://periskope.app/",
+  },
+  {
+    company: "SimpliML",
+    role: "Full-Stack Developer",
+    year: "2023",
+    link: "https://simpliml.com/",
+  },
+  {
+    company: "Frenzopay",
+    role: "UI/UX Designer",
+    year: "2022 - 2023",
+    link: "https://frenzopay.com/",
+  },
+];
+
+const education = [
+  {
+    course: "M.Sc. Human-Computer Interaction",
+    university: "University of Nottingham",
+    year: "2023 - 2024",
+  },
+  {
+    course: "CS50x: Introduction to Computer Science",
+    university: "CS50, Harvard University",
+    year: "2023",
+  },
+  {
+    course: "B.Sc. Neuroscience",
+    university: "Amity University Noida",
+    year: "2020 - 2023",
+  },
+];
 
 function About() {
   return (
@@ -25,32 +65,27 @@ function About() {
           </div>
           <div className="about-cards p-8 lg:col-span-2 lg:row-span-2">
             <h1 className="text-2xl font-normal">Experience</h1>
-            <h1 className="about-text mb-2">SimpliML</h1>
-            <h2>Full-Stack Developer</h2>
-            <span className="text-ash-100">2023</span>
-
-            <h1 className="about-text mb-2">Frenzopay</h1>
-            <h2>UI/UX Designer</h2>
-            <span className="text-ash-100">2022 - 2023</span>
-
-            <h1 className="about-text mb-2">Marcadors</h1>
-            <h2>Motion Graphics Designer</h2>
-            <span className="text-ash-100">2022 - 2023</span>
+            {experience.map((exp) => (
+              <div key={exp.company} className="mb-4">
+                <Link to={exp.link}>
+                  <h1 className="about-text" role="button">
+                    {exp.company}
+                  </h1>
+                </Link>
+                <h2>{exp.role}</h2>
+                <span className="text-ash-100">{exp.year}</span>
+              </div>
+            ))}
           </div>
           <div className="about-cards p-8 lg:col-span-3">
             <h1 className="text-2xl font-normal">Education</h1>
-            <h1 className="about-text">M.Sc. Human-Computer Interaction</h1>
-            <h2>Univeristy of Nottingham</h2>
-            <span className="text-ash-100">2023 - 2024</span>
-
-            <h1 className="about-text">
-              CS50x: Introduction to Computer Science
-            </h1>
-            <h2>CS50, Harvard University</h2>
-            <span className="text-ash-100">2023</span>
-            <h1 className="about-text">B.Sc. Neuroscience</h1>
-            <h2>Amity University Noida</h2>
-            <span className="text-ash-100">2020 - 2023</span>
+            {education.map((edu) => (
+              <div key={edu.course} className="mb-4">
+                <h1 className="about-text">{edu.course}</h1>
+                <h2>{edu.university}</h2>
+                <span className="text-ash-100">{edu.year}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
