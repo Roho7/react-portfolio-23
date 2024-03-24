@@ -4,6 +4,7 @@ import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 function Project(props) {
   const projectData = props.data;
+  const scrollRef = useHorizontalScroll();
 
   return (
     <section className="relative mt-20 mb-20 md:mt-40 md:mb-40">
@@ -14,7 +15,9 @@ function Project(props) {
             <div className="absolute h-0.5 w-full bg-grass-500"></div>
           </div>
         </div>
-        <div className="relative cards w-full overflow-x-scroll flex gap-10 md:gap-20 px-10 md:px-20 cursor-all-scroll">
+        <div
+          className="relative cards w-full overflow-x-scroll flex gap-10 md:gap-20 px-10 md:px-20 cursor-all-scroll"
+          ref={scrollRef}>
           {projectData.map((item) => {
             return (
               <Card
